@@ -25,15 +25,31 @@ import Layout from '../layouts/Layout.astro';
     </header>
 
     <article class="featured">
-      <p class="featured__kicker">feature</p>
-      <h2 class="featured__title"><em>the four-stage agent pipeline.</em></h2>
-      <div class="featured__body">
-        <p>research, plan, implement, verify-and-simplify, with me as the human gate between each. markdown artifacts handed off between subagents. ~40 story points/sprint sustained at spare; built the next iteration on personal time.</p>
-        <p>mastra + claude opus. designed to be the thing other people ask about.</p>
+      <div class="featured__main">
+        <p class="featured__kicker">feature</p>
+        <h2 class="featured__title"><em>yomiko.</em></h2>
+        <div class="featured__body">
+          <p>a japanese visual novel reader for macos. capture any window, OCR via apple vision, hover popups attach to the VN's own rendered text. no parsed-text duplicate bar. on-hover VLM translation routed through a cloudflare worker proxy so installs don't ship my openrouter key. JMdict popup on shift+hover. ⌘⇧T force-translates the whole frame for calligraphic title cards that defeat constrained OCR.</p>
+          <p>windows port in progress; sentence mining to anki planned. building in public.</p>
+        </div>
+        <p class="featured__link">
+          <a href="https://github.com/jrgmadrid/yomiko">github.com/jrgmadrid/yomiko</a>
+        </p>
       </div>
-      <p class="featured__link">
-        <a href="https://github.com/jrgmadrid">writeup forthcoming. for now: see the bones on github.</a>
-      </p>
+      <aside class="featured__meta" aria-label="feature meta">
+        <div class="featured__meta-row">
+          <p class="featured__meta-label"><em>status.</em></p>
+          <p>macOS shipping. windows next.</p>
+        </div>
+        <div class="featured__meta-row">
+          <p class="featured__meta-label"><em>stack.</em></p>
+          <p>electron + react. apple vision via swift sidecar. qwen2.5-vl on openrouter.</p>
+        </div>
+        <div class="featured__meta-row">
+          <p class="featured__meta-label"><em>repo.</em></p>
+          <p>open source. license tbd.</p>
+        </div>
+      </aside>
     </article>
 
     <aside class="sidebar" aria-label="currently">
@@ -42,17 +58,17 @@ import Layout from '../layouts/Layout.astro';
       <section class="sidebar__group">
         <h3 class="sidebar__label"><em>reading</em></h3>
         <ul class="sidebar__list">
-          <li>fredric jameson, <em>postmodernism, or, the cultural logic of late capitalism</em>. archived on the desk for two weeks.</li>
-          <li>deleuze + guattari, <em>capitalism and schizophrenia</em>. rhizomes only; the rest can wait.</li>
+          <li>walter benjamin, <em>radio benjamin</em>. 1929-1933.</li>
+          <li>seth dickinson, <em>the traitor baru cormorant</em>. masquerade book one.</li>
+          <li>william blake, <em>songs of innocence and experience</em>. 1789-1794.</li>
         </ul>
       </section>
 
       <section class="sidebar__group">
         <h3 class="sidebar__label"><em>building</em></h3>
         <ul class="sidebar__list">
+          <li>yomiko. japanese VN reader for macos. windows port next.</li>
           <li>this site. you're inside it.</li>
-          <li>the four-stage agent pipeline. personal r&amp;d iteration.</li>
-          <li>mech tactics: godot 4, fire-emblem-with-robots prototype. gift project; not for sale.</li>
         </ul>
       </section>
 
@@ -103,7 +119,7 @@ import Layout from '../layouts/Layout.astro';
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-      "m m m m m m m m m m m m"
+      "m m m m m m m m s s s s"
       "f f f f f f f f s s s s"
       "c c c c c c c c c c c c";
     min-height: 100vh;
@@ -115,23 +131,18 @@ import Layout from '../layouts/Layout.astro';
     background: var(--color-purple-deep);
     padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
     border-bottom: 1px solid var(--color-grid-on-purple);
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: var(--grid-gap);
-    align-items: end;
-    row-gap: var(--space-lg);
-  }
-
-  .masthead__publication {
-    grid-column: 1 / 9;
+    border-right: 1px solid var(--color-grid-on-purple);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
   }
 
   .masthead__title {
     font-size: var(--text-display);
-    font-weight: 300;
+    font-weight: 700;
     line-height: var(--leading-display);
-    letter-spacing: -0.025em;
-    margin: 0 0 var(--space-md) -0.04em;
+    letter-spacing: -0.035em;
+    margin: 0 0 var(--space-md) -0.05em;
     color: var(--color-ink-on-purple);
   }
 
@@ -147,16 +158,15 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .masthead__wink {
-    grid-column: 9 / -1;
-    align-self: end;
+    align-self: flex-end;
     font-family: var(--font-display);
     font-style: italic;
     font-size: var(--text-subheading);
     color: var(--color-ink-on-purple-muted);
     line-height: var(--leading-heading);
     text-align: right;
-    max-width: 28ch;
-    margin-left: auto;
+    max-width: 30ch;
+    margin: var(--space-md) 0 0;
   }
 
   .masthead__wink p {
@@ -166,17 +176,50 @@ import Layout from '../layouts/Layout.astro';
   /* Featured pointer ------------------------------------ */
   .featured {
     grid-area: f;
-    background: var(--color-purple-deep);
+    background: var(--color-purple-twilight);
     padding: var(--space-3xl) var(--container-padding);
     border-right: 1px solid var(--color-grid-on-purple);
     color: var(--color-ink-on-purple);
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    column-gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .featured__meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    line-height: var(--leading-body);
+    color: var(--color-ink-on-purple-muted);
+    padding-left: var(--space-lg);
+    border-left: 1px solid var(--color-grid-on-purple);
+  }
+
+  .featured__meta-row {
+    margin-bottom: var(--space-lg);
+  }
+
+  .featured__meta-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .featured__meta-label {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-small);
+    color: var(--color-ink-on-purple-faint);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .featured__meta-row p {
+    margin: 0;
   }
 
   .featured__kicker {
     font-family: var(--font-mono);
     font-size: var(--text-caption);
     letter-spacing: 0.22em;
-    color: var(--color-ink-on-purple-faint);
+    color: var(--color-ink-on-purple-muted);
     margin: 0 0 var(--space-lg);
   }
 
@@ -269,17 +312,15 @@ import Layout from '../layouts/Layout.astro';
   .colophon {
     grid-area: c;
     background: var(--color-purple-deeper);
-    padding: var(--space-2xl) var(--container-padding);
+    padding: var(--space-xl) var(--container-padding);
     border-top: 1px solid var(--color-grid-on-purple);
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: var(--grid-gap);
-    row-gap: var(--space-lg);
     color: var(--color-ink-on-purple-muted);
   }
 
   .colophon__group {
-    grid-column: span 3;
     font-family: var(--font-mono);
     font-size: var(--text-small);
     line-height: var(--leading-body);
@@ -290,7 +331,6 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .colophon__group--find {
-    grid-column: 10 / -1;
     text-align: right;
   }
 
@@ -338,10 +378,20 @@ import Layout from '../layouts/Layout.astro';
       padding: var(--space-2xl) var(--container-padding);
       border-right: none;
       border-top: 1px solid var(--color-grid-on-purple);
+      grid-template-columns: 1fr;
+      column-gap: 0;
     }
 
     .featured__title {
       max-width: 18ch;
+    }
+
+    .featured__meta {
+      border-left: none;
+      border-top: 1px solid var(--color-grid-on-purple);
+      padding-left: 0;
+      padding-top: var(--space-lg);
+      margin-top: var(--space-xl);
     }
 
     .sidebar {

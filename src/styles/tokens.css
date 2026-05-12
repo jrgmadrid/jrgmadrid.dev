@@ -6,6 +6,7 @@
 
 :root {
   /* Color: night-sky palette */
+  --color-purple-twilight: oklch(38% 0.095 285);
   --color-purple-deep: oklch(28% 0.085 285);
   --color-purple-deeper: oklch(20% 0.07 285);
   --color-purple-deepest: oklch(14% 0.05 285);
