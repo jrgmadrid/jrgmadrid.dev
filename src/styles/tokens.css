@@ -1,0 +1,59 @@
+/* Design tokens. The Late-Tokyo Editorial system.
+ * Color anchor: oklch(28-32% 0.08-0.10 285), the upper-sky in the
+ * riverside scene from Yuasa's Night Is Short, Walk On Girl.
+ * See DESIGN.md and PRODUCT.md for the strategic context.
+ */
+
+:root {
+  /* Color: night-sky palette */
+  --color-purple-deep: oklch(28% 0.085 285);
+  --color-purple-deeper: oklch(20% 0.07 285);
+  --color-purple-deepest: oklch(14% 0.05 285);
+  --color-cream-paper: oklch(94% 0.012 85);
+  --color-cream-paper-deep: oklch(86% 0.018 80);
+
+  /* Ink: warm paper on purple, brand-tinted on cream */
+  --color-ink-on-purple: oklch(95% 0.008 85);
+  --color-ink-on-purple-muted: oklch(78% 0.014 85);
+  --color-ink-on-purple-faint: oklch(58% 0.018 85);
+  --color-ink-on-cream: oklch(22% 0.06 285);
+  --color-ink-on-cream-muted: oklch(42% 0.05 285);
+
+  /* Hairline grid lines (the visible-grid voice) */
+  --color-grid-on-purple: oklch(95% 0.008 85 / 0.15);
+  --color-grid-on-cream: oklch(22% 0.06 285 / 0.18);
+
+  /* Spacing: 4pt base, semantic names */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Type scale: fluid clamp(), ≥1.25 ratio between steps */
+  --text-display: clamp(4rem, 9vw, 8.5rem);
+  --text-heading: clamp(1.75rem, 3.6vw, 3rem);
+  --text-subheading: clamp(1.15rem, 1.6vw, 1.4rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-caption: 0.75rem;
+
+  /* Line heights */
+  --leading-display: 0.95;
+  --leading-heading: 1.08;
+  --leading-body: 1.6;
+  --leading-mono-tight: 1.4;
+
+  /* Type families. Canela (Commercial Type, web-licensed) +
+   * Triplicate (House Industries). Fallbacks lean on system mono
+   * for the sketch dev environment. Production deploy must self-host. */
+  --font-display: "Canela", "canelaweb", "Canela Web", Georgia, serif;
+  --font-mono: "Triplicate T4", "Triplicate", "Akkurat Mono LL Web", "Akkurat Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Container & grid */
+  --container-padding: clamp(24px, 4vw, 64px);
+  --grid-gap: clamp(16px, 1.5vw, 24px);
+}

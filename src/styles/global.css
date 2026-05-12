@@ -1,1 +1,80 @@
 @import "tailwindcss";
+@import "./tokens.css";
+
+/* SKETCH ONLY: fonts resolve via system install (~/Library/Fonts).
+ * Production deploy must copy webfont files to /public/fonts/ and
+ * verify web licenses. Canela web is confirmed licensed in the
+ * user's collection; Triplicate license status TBD. */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-purple-deep);
+  color: var(--color-ink-on-purple);
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  text-transform: lowercase;
+}
+
+/* Headings carry the Canela voice */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  margin: 0;
+  text-transform: none;
+}
+
+/* Selection: cream-on-purple to read like a magazine highlighter */
+::selection {
+  background: var(--color-cream-paper);
+  color: var(--color-purple-deep);
+  text-shadow: none;
+}
+
+/* Links: underline-respecting, no decoration violence */
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: currentColor;
+  transition: text-decoration-thickness 120ms ease-out,
+              text-underline-offset 120ms ease-out;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-ink-on-purple);
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
+/* Italic ducks use Canela italic specifically */
+em, i {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* Reduced motion: only the link micro-transitions exist; honor preference */
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}

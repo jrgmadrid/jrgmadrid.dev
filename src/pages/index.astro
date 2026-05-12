@@ -1,17 +1,364 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="jrgmadrid"
+  description="after-hours editorial. senior dev, vancouver, between things."
+>
+  <main class="spread">
+
+    <header class="masthead">
+      <div class="masthead__publication">
+        <h1 class="masthead__title">jrgmadrid.</h1>
+        <p class="masthead__meta">
+          <span>after-hours editorial</span>
+          <span aria-hidden="true">·</span>
+          <span>no.001</span>
+          <span aria-hidden="true">·</span>
+          <span>may 2026</span>
+        </p>
+      </div>
+      <aside class="masthead__wink" aria-label="masthead note">
+        <p>it's a personal site, calm down.<br />lowercase on purpose.</p>
+      </aside>
+    </header>
+
+    <article class="featured">
+      <p class="featured__kicker">feature</p>
+      <h2 class="featured__title"><em>the four-stage agent pipeline.</em></h2>
+      <div class="featured__body">
+        <p>research, plan, implement, verify-and-simplify, with me as the human gate between each. markdown artifacts handed off between subagents. ~40 story points/sprint sustained at spare; built the next iteration on personal time.</p>
+        <p>mastra + claude opus. designed to be the thing other people ask about.</p>
+      </div>
+      <p class="featured__link">
+        <a href="https://github.com/jrgmadrid">writeup forthcoming. for now: see the bones on github.</a>
+      </p>
+    </article>
+
+    <aside class="sidebar" aria-label="currently">
+      <h2 class="sidebar__title">currently.</h2>
+
+      <section class="sidebar__group">
+        <h3 class="sidebar__label"><em>reading</em></h3>
+        <ul class="sidebar__list">
+          <li>fredric jameson, <em>postmodernism, or, the cultural logic of late capitalism</em>. archived on the desk for two weeks.</li>
+          <li>deleuze + guattari, <em>capitalism and schizophrenia</em>. rhizomes only; the rest can wait.</li>
+        </ul>
+      </section>
+
+      <section class="sidebar__group">
+        <h3 class="sidebar__label"><em>building</em></h3>
+        <ul class="sidebar__list">
+          <li>this site. you're inside it.</li>
+          <li>the four-stage agent pipeline. personal r&amp;d iteration.</li>
+          <li>mech tactics: godot 4, fire-emblem-with-robots prototype. gift project; not for sale.</li>
+        </ul>
+      </section>
+
+      <section class="sidebar__group">
+        <h3 class="sidebar__label"><em>watching</em></h3>
+        <ul class="sidebar__list">
+          <li>yuasa, <em>night is short, walk on girl</em>. third pass this year.</li>
+          <li>whatever is on mubi at 11pm.</li>
+        </ul>
+      </section>
+
+      <section class="sidebar__group">
+        <h3 class="sidebar__label"><em>drinking</em></h3>
+        <ul class="sidebar__list">
+          <li>espresso tonic. oat milk on the side.</li>
+        </ul>
+      </section>
+    </aside>
+
+    <footer class="colophon">
+      <div class="colophon__group">
+        <p class="colophon__label"><em>this issue</em></p>
+        <p>no.001<br />may 2026</p>
+      </div>
+      <div class="colophon__group">
+        <p class="colophon__label"><em>type</em></p>
+        <p>canela, commercial type.<br />triplicate, house industries.</p>
+      </div>
+      <div class="colophon__group">
+        <p class="colophon__label"><em>color</em></p>
+        <p>night-sky purple, lifted from the riverside scene in yuasa's <em>night is short, walk on girl</em>.</p>
+      </div>
+      <div class="colophon__group">
+        <p class="colophon__label"><em>built</em></p>
+        <p>astro + tailwind v4. claude wrote first drafts. the page refuses to look like that.</p>
+      </div>
+      <div class="colophon__group colophon__group--find">
+        <p class="colophon__label"><em>find me</em></p>
+        <p><a href="https://github.com/jrgmadrid">github.com/jrgmadrid</a></p>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
+
+<style>
+  .spread {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "m m m m m m m m m m m m"
+      "f f f f f f f f s s s s"
+      "c c c c c c c c c c c c";
+    min-height: 100vh;
+  }
+
+  /* Masthead --------------------------------------------- */
+  .masthead {
+    grid-area: m;
+    background: var(--color-purple-deep);
+    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
+    border-bottom: 1px solid var(--color-grid-on-purple);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--grid-gap);
+    align-items: end;
+    row-gap: var(--space-lg);
+  }
+
+  .masthead__publication {
+    grid-column: 1 / 9;
+  }
+
+  .masthead__title {
+    font-size: var(--text-display);
+    font-weight: 300;
+    line-height: var(--leading-display);
+    letter-spacing: -0.025em;
+    margin: 0 0 var(--space-md) -0.04em;
+    color: var(--color-ink-on-purple);
+  }
+
+  .masthead__meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    color: var(--color-ink-on-purple-muted);
+    letter-spacing: 0.05em;
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .masthead__wink {
+    grid-column: 9 / -1;
+    align-self: end;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-subheading);
+    color: var(--color-ink-on-purple-muted);
+    line-height: var(--leading-heading);
+    text-align: right;
+    max-width: 28ch;
+    margin-left: auto;
+  }
+
+  .masthead__wink p {
+    margin: 0;
+  }
+
+  /* Featured pointer ------------------------------------ */
+  .featured {
+    grid-area: f;
+    background: var(--color-purple-deep);
+    padding: var(--space-3xl) var(--container-padding);
+    border-right: 1px solid var(--color-grid-on-purple);
+    color: var(--color-ink-on-purple);
+  }
+
+  .featured__kicker {
+    font-family: var(--font-mono);
+    font-size: var(--text-caption);
+    letter-spacing: 0.22em;
+    color: var(--color-ink-on-purple-faint);
+    margin: 0 0 var(--space-lg);
+  }
+
+  .featured__title {
+    font-size: var(--text-heading);
+    font-weight: 400;
+    line-height: var(--leading-heading);
+    margin: 0 0 var(--space-2xl) -0.03em;
+    max-width: 20ch;
+    color: var(--color-ink-on-purple);
+  }
+
+  .featured__body {
+    max-width: 52ch;
+    margin-bottom: var(--space-xl);
+  }
+
+  .featured__body p {
+    font-family: var(--font-mono);
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    margin: 0 0 var(--space-md);
+    color: var(--color-ink-on-purple);
+  }
+
+  .featured__body p:last-child {
+    color: var(--color-ink-on-purple-muted);
+  }
+
+  .featured__link {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    margin: 0;
+    color: var(--color-ink-on-purple-muted);
+  }
+
+  /* Sidebar -------------------------------------------- */
+  .sidebar {
+    grid-area: s;
+    background: var(--color-cream-paper);
+    color: var(--color-ink-on-cream);
+    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
+  }
+
+  .sidebar__title {
+    font-size: var(--text-heading);
+    font-weight: 400;
+    line-height: var(--leading-heading);
+    margin: 0 0 var(--space-2xl) -0.03em;
+    color: var(--color-ink-on-cream);
+  }
+
+  .sidebar__group {
+    margin-bottom: var(--space-xl);
+  }
+
+  .sidebar__group:last-child {
+    margin-bottom: 0;
+  }
+
+  .sidebar__label {
+    font-size: var(--text-subheading);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 var(--space-sm);
+    color: var(--color-ink-on-cream-muted);
+  }
+
+  .sidebar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar__list li {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    line-height: var(--leading-body);
+    padding: var(--space-sm) 0;
+    border-top: 1px solid var(--color-grid-on-cream);
+    color: var(--color-ink-on-cream);
+  }
+
+  .sidebar__list li:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  /* Colophon ------------------------------------------- */
+  .colophon {
+    grid-area: c;
+    background: var(--color-purple-deeper);
+    padding: var(--space-2xl) var(--container-padding);
+    border-top: 1px solid var(--color-grid-on-purple);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--grid-gap);
+    row-gap: var(--space-lg);
+    color: var(--color-ink-on-purple-muted);
+  }
+
+  .colophon__group {
+    grid-column: span 3;
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    line-height: var(--leading-body);
+  }
+
+  .colophon__group p {
+    margin: 0;
+  }
+
+  .colophon__group--find {
+    grid-column: 10 / -1;
+    text-align: right;
+  }
+
+  .colophon__group--find a {
+    color: var(--color-ink-on-purple);
+  }
+
+  .colophon__label {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-small);
+    color: var(--color-ink-on-purple-faint);
+    margin: 0 0 var(--space-xs);
+  }
+
+  /* Mobile-different ----------------------------------- */
+  @media (max-width: 767px) {
+    .spread {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "m"
+        "f"
+        "s"
+        "c";
+    }
+
+    .masthead {
+      display: block;
+      padding: var(--space-2xl) var(--container-padding);
+    }
+
+    .masthead__publication,
+    .masthead__wink {
+      grid-column: auto;
+    }
+
+    .masthead__wink {
+      text-align: left;
+      max-width: none;
+      margin: var(--space-lg) 0 0;
+      font-size: var(--text-body);
+    }
+
+    .featured {
+      padding: var(--space-2xl) var(--container-padding);
+      border-right: none;
+      border-top: 1px solid var(--color-grid-on-purple);
+    }
+
+    .featured__title {
+      max-width: 18ch;
+    }
+
+    .sidebar {
+      padding: var(--space-2xl) var(--container-padding);
+    }
+
+    .colophon {
+      grid-template-columns: 1fr;
+      row-gap: var(--space-lg);
+    }
+
+    .colophon__group {
+      grid-column: 1 / -1;
+    }
+
+    .colophon__group--find {
+      text-align: left;
+    }
+  }
+</style>
