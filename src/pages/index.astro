@@ -4,21 +4,12 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="jrgmadrid"
-  description="after-hours editorial. senior dev, vancouver, between things."
+  description="personal site. senior dev between things. building yomiko."
 >
   <main class="spread">
 
     <header class="masthead">
-      <div class="masthead__publication">
-        <h1 class="masthead__title">jrgmadrid.</h1>
-        <p class="masthead__meta">
-          <span>after-hours editorial</span>
-          <span aria-hidden="true">·</span>
-          <span>no.001</span>
-          <span aria-hidden="true">·</span>
-          <span>may 2026</span>
-        </p>
-      </div>
+      <h1 class="masthead__title">jrgmadrid.</h1>
       <aside class="masthead__wink" aria-label="masthead note">
         <p>building in public is cringe but then again so am i.</p>
       </aside>
@@ -90,10 +81,6 @@ import Layout from '../layouts/Layout.astro';
 
     <footer class="colophon">
       <div class="colophon__group">
-        <p class="colophon__label"><em>this issue</em></p>
-        <p>no.001<br />may 2026</p>
-      </div>
-      <div class="colophon__group">
         <p class="colophon__label"><em>type</em></p>
         <p>canela, commercial type.<br />triplicate, house industries.</p>
       </div>
@@ -144,17 +131,6 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: -0.035em;
     margin: 0 0 var(--space-md) -0.05em;
     color: var(--color-ink-on-purple);
-  }
-
-  .masthead__meta {
-    font-family: var(--font-mono);
-    font-size: var(--text-small);
-    color: var(--color-ink-on-purple-muted);
-    letter-spacing: 0.05em;
-    display: flex;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
-    margin: 0;
   }
 
   .masthead__wink {
@@ -317,7 +293,7 @@ import Layout from '../layouts/Layout.astro';
     padding: var(--space-xl) var(--container-padding);
     border-top: 1px solid var(--color-grid-on-purple);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: var(--grid-gap);
     color: var(--color-ink-on-purple-muted);
   }
