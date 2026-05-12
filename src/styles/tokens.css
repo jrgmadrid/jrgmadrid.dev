@@ -20,6 +20,10 @@
   --color-ink-on-cream: oklch(22% 0.06 285);
   --color-ink-on-cream-muted: oklch(42% 0.05 285);
 
+  /* Warm accent: ribbon-red from the Yuasa frame.
+   * Held-in-reserve color from DESIGN.md, used at <=1% surface. */
+  --color-warm-ribbon: oklch(72% 0.17 25);
+
   /* Hairline grid lines (the visible-grid voice) */
   --color-grid-on-purple: oklch(95% 0.008 85 / 0.15);
   --color-grid-on-cream: oklch(22% 0.06 285 / 0.18);

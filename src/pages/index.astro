@@ -10,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
 
     <header class="masthead">
       <h1 class="masthead__title">jrgmadrid.</h1>
-      <aside class="masthead__wink" aria-label="masthead note">
-        <p>building in public is cringe but then again so am i.</p>
+      <aside class="masthead__wink">
+        <p>building in public is <span class="masthead__wink-accent">cringe</span> but then again so am i.</p>
       </aside>
     </header>
 
@@ -141,6 +141,10 @@ import Layout from '../layouts/Layout.astro';
     text-align: left;
     max-width: 22ch;
     margin: var(--space-lg) 0 0 -0.04em;
+  }
+
+  .masthead__wink-accent {
+    color: var(--color-warm-ribbon);
   }
 
   .masthead__wink p {
