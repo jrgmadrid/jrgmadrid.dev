@@ -18,9 +18,9 @@ import Layout from '../layouts/Layout.astro';
     <article class="featured">
       <div class="featured__main">
         <p class="featured__kicker">feature</p>
-        <h2 class="featured__title"><em>yomiko.</em></h2>
+        <h2 class="featured__title">yomiko.</h2>
         <div class="featured__body">
-          <p>a japanese visual novel reader for macos. capture any window, OCR via apple vision, hover popups attach to the VN's own rendered text. no parsed-text duplicate bar. on-hover VLM translation routed through a cloudflare worker proxy so installs don't ship my openrouter key. JMdict popup on shift+hover. ⌘⇧T force-translates the whole frame for calligraphic title cards that defeat constrained OCR.</p>
+          <p>a japanese visual novel reader for macos. capture any window, ocr via apple vision, hover popups attach to the vn's own rendered text. no parsed-text duplicate bar. on-hover vlm translation routed through a cloudflare worker proxy so installs don't ship my openrouter key. jmdict popup on shift+hover. ⌘⇧T force-translates the whole frame for calligraphic title cards that defeat constrained ocr.</p>
           <p>windows port in progress; sentence mining to anki planned. building in public.</p>
         </div>
         <p class="featured__link">
@@ -29,16 +29,12 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <aside class="featured__meta" aria-label="feature meta">
         <div class="featured__meta-row">
-          <p class="featured__meta-label"><em>status.</em></p>
-          <p>macOS shipping. windows next.</p>
-        </div>
-        <div class="featured__meta-row">
-          <p class="featured__meta-label"><em>stack.</em></p>
+          <p class="featured__meta-label">stack</p>
           <p>electron + react. apple vision via swift sidecar. qwen2.5-vl on openrouter.</p>
         </div>
         <div class="featured__meta-row">
-          <p class="featured__meta-label"><em>repo.</em></p>
-          <p>open source. license tbd.</p>
+          <p class="featured__meta-label">repo</p>
+          <p>open source.</p>
         </div>
       </aside>
     </article>
@@ -47,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="sidebar__title">currently.</h2>
 
       <section class="sidebar__group">
-        <h3 class="sidebar__label"><em>reading</em></h3>
+        <h3 class="sidebar__label">reading</h3>
         <ul class="sidebar__list">
           <li>walter benjamin, <em>radio benjamin</em>. 1929-1933.</li>
           <li>seth dickinson, <em>the traitor baru cormorant</em>. masquerade book one.</li>
@@ -56,15 +52,15 @@ import Layout from '../layouts/Layout.astro';
       </section>
 
       <section class="sidebar__group">
-        <h3 class="sidebar__label"><em>building</em></h3>
+        <h3 class="sidebar__label">building</h3>
         <ul class="sidebar__list">
-          <li>yomiko. japanese VN reader for macos. windows port next.</li>
+          <li>yomiko. japanese vn reader for macos. windows port next.</li>
           <li>this site. you're inside it.</li>
         </ul>
       </section>
 
       <section class="sidebar__group">
-        <h3 class="sidebar__label"><em>watching</em></h3>
+        <h3 class="sidebar__label">watching</h3>
         <ul class="sidebar__list">
           <li>yuasa, <em>night is short, walk on girl</em>. third pass this year.</li>
           <li>whatever is on mubi at 11pm.</li>
@@ -72,7 +68,7 @@ import Layout from '../layouts/Layout.astro';
       </section>
 
       <section class="sidebar__group">
-        <h3 class="sidebar__label"><em>drinking</em></h3>
+        <h3 class="sidebar__label">drinking</h3>
         <ul class="sidebar__list">
           <li>espresso tonic. oat milk on the side.</li>
         </ul>
@@ -81,19 +77,19 @@ import Layout from '../layouts/Layout.astro';
 
     <footer class="colophon">
       <div class="colophon__group">
-        <p class="colophon__label"><em>type</em></p>
+        <p class="colophon__label">type</p>
         <p>canela, commercial type.<br />triplicate, house industries.</p>
       </div>
       <div class="colophon__group">
-        <p class="colophon__label"><em>color</em></p>
+        <p class="colophon__label">color</p>
         <p>night-sky purple, lifted from the riverside scene in yuasa's <em>night is short, walk on girl</em>.</p>
       </div>
       <div class="colophon__group">
-        <p class="colophon__label"><em>built</em></p>
+        <p class="colophon__label">built</p>
         <p>astro + tailwind v4. claude wrote first drafts. the page refuses to look like that.</p>
       </div>
       <div class="colophon__group colophon__group--find">
-        <p class="colophon__label"><em>find me</em></p>
+        <p class="colophon__label">find me</p>
         <p><a href="https://github.com/jrgmadrid">github.com/jrgmadrid</a></p>
       </div>
     </footer>
@@ -202,6 +198,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .featured__title {
+    font-style: italic;
     font-size: var(--text-heading);
     font-weight: 400;
     line-height: var(--leading-heading);
@@ -243,6 +240,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .sidebar__title {
+    font-style: italic;
     font-size: var(--text-heading);
     font-weight: 400;
     line-height: var(--leading-heading);
@@ -259,6 +257,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .sidebar__label {
+    font-style: italic;
     font-size: var(--text-subheading);
     font-weight: 400;
     line-height: 1.1;
