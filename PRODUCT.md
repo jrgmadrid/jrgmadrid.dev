@@ -32,7 +32,17 @@ Three words: **cultivated, wry, unapologetic.**
 - *Wry*: every cultural signifier comes with a built-in wink. The site never pretends its own pose is invisible. It can name the pretension before a reader does.
 - *Unapologetic*: doesn't defend itself for being literate. The "techbro discovers taste" discourse is a recent arrival; this person was already here. Reads like someone who got tired of explaining.
 
-Tone: staff-engineer-with-an-MFA-reading-list, not influencer-with-a-curated-shelfie.
+### Voice signatures
+
+- **Lowercase as register.** Not carelessness, deliberate refusal of LinkedIn-corp-speak. Sentence case reads as performing seniority; lowercase reads as past needing to.
+- **Internet-native vocabulary.** "kinda neat," "groovy," "brr," "btfo," "(we were skipping the cache, oops)." Casual lexicon coexists with technical density. Seriousness is earned by not signaling seriousness.
+- **Technical specificity over abstraction.** Names tools by name (claude, mastra, kafka, embeddings). Owner verbs: "killed," "shipped," "extracted." Bugs called "oops." Marketing-speak loses against a precise verb.
+- **Boundaries enforced visibly.** "middlemen btfo." Willing to be unfriendly to gatekeep audience. The site can have rules and state them flatly.
+- **Self-roast as credibility.** Admits mistakes in passing rather than varnishing them. "(oops)" outweighs polished outcomes summaries.
+- **Wink first, not last.** The self-awareness about the pose isn't a footnote, it's the opening move. README begins with "building in public is cringe but then again so am i." The wink establishes credibility, it doesn't erode it.
+- **Self-undermining cadence.** Statement → walk-back → walk-back-the-walk-back: "anyway, i'll post here more often. maybe. no promises. (okay, maybe some promises.)" Replicate the rhythm where copy needs to seem accountable without overcommitting.
+
+Tone: staff-engineer-with-an-MFA-reading-list who types in lowercase. The cultivated register (theory, criticism, espresso tonic) and the internet-native register (lowercase, brr, btfo) are the same voice operating across surfaces, not contradictions to reconcile.
 
 ## Anti-references
 
@@ -42,14 +52,14 @@ This site is NOT:
 - **Crypto / AI-startup aesthetic.** Purple/violet gradients, cyan-on-dark, glassmorphism, animated mesh backgrounds, gradient text.
 - **Linear-clone dark mode.** Glass cards, blurred backgrounds, gradient borders, "designed by an eng who likes Linear."
 - **Theatrical / playful / character-forward.** Mascots, illustrations, big personality animations. That register belongs to morningstar.moe.
-- **Techbros-doing-taste.** Stripe-clone restrained-tasteful that's now its own slop genre. The "I learned about Helvetica recently" lane. Tech-minimal as costume.
+- **Techbros-doing-taste.** Stripe-clone restrained-tasteful that's now its own slop genre. The "I learned about Helvetica recently" lane. Tech-minimal as costume. Adjacent: stoicism-as-personality, founder-shelfie-taste, "I optimize my life." Explicitly cited as a dislike: *thinking you have "taste" just because you've read marcus aurelius once*. Defended against actively.
 
 ## Design Principles
 
 1. **Earned, not signaled.** Every reference, every detail, every quote earns its place by belonging to the person. Decorative cultural name-drops fail the test.
 2. **Wear the pose, then wink.** Self-awareness is part of the design surface, not a footnote. The page can name its own pretension before a visitor does.
 3. **Density rewards reading.** Surface clarity for the skimmer, depth for the reader. The site rewards the user who scrolls slowly.
-4. **Pre-empt the techbro-taste reading.** Specificity, written voice, and unexpected adjacencies (theory, criticism, lived practice) defend against the "developer who discovered Helvetica" reading.
+4. **Self-directed, not audience-directed.** The site is built for its maker first; engaging the peer audience is a downstream effect of making something the maker actually wanted. The maker's own framing ("the only ARR that matters is my own self-satisfaction") names this stance directly. Optimizing for engagement reads as desperate; optimizing for self-satisfaction reads as confident, which is exactly what attracts engineering peers. This implicitly defends against the "techbro discovers taste" reading: that lane is audience-directed by definition, so being self-directed disqualifies us from being mistaken for it.
 5. **Bring the humanities in.** Code work is contextualized by cultural reading, not silo'd into "professional" vs "personal." The about page does not have a section called "Hobbies."
 
 ## Accessibility & Inclusion
