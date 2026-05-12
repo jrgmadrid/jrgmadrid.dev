@@ -20,8 +20,9 @@ import Layout from '../layouts/Layout.astro';
         <p class="featured__kicker">feature</p>
         <h2 class="featured__title">yomiko.</h2>
         <div class="featured__body">
-          <p>a japanese visual novel reader for macos. capture any window, ocr via apple vision, hover popups attach to the vn's own rendered text. no parsed-text duplicate bar. on-hover vlm translation routed through a cloudflare worker proxy so installs don't ship my openrouter key. jmdict popup on shift+hover. ⌘⇧T force-translates the whole frame for calligraphic title cards that defeat constrained ocr.</p>
-          <p>windows port in progress; sentence mining to anki planned. building in public.</p>
+          <p>japanese vn reader for macos. captures any window, ocrs via apple vision, hover popups attach to the vn's own rendered text. no parsed-text duplicate bar above the window like every other tool does. (i used those tools for two years before getting tired enough to build this one.)</p>
+          <p>on-hover vlm translation routed through a cloudflare worker proxy so installs don't ship my openrouter key. jmdict popup on shift+hover. ⌘⇧T force-translates the whole frame when ocr nopes out on calligraphic title cards or buddhist mantras.</p>
+          <p>windows port in progress (ocr sidecar in C# done; window-info sidecar tbd). sentence mining to anki coming eventually, maybe.</p>
         </div>
         <p class="featured__link">
           <a href="https://github.com/jrgmadrid/yomiko">github.com/jrgmadrid/yomiko</a>
@@ -225,9 +226,6 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-ink-on-purple);
   }
 
-  .featured__body p:last-child {
-    color: var(--color-ink-on-purple-muted);
-  }
 
   .featured__link {
     font-family: var(--font-mono);
