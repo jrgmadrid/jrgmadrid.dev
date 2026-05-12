@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
       <aside class="masthead__wink" aria-label="masthead note">
-        <p>it's a personal site, calm down.<br />lowercase on purpose.</p>
+        <p>building in public is cringe but then again so am i.</p>
       </aside>
     </header>
 
@@ -158,15 +158,17 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .masthead__wink {
-    align-self: flex-end;
+    align-self: stretch;
     font-family: var(--font-display);
     font-style: italic;
-    font-size: var(--text-subheading);
+    font-weight: 400;
+    font-size: clamp(2rem, 4.5vw, 4.5rem);
     color: var(--color-ink-on-purple-muted);
-    line-height: var(--leading-heading);
-    text-align: right;
-    max-width: 30ch;
-    margin: var(--space-md) 0 0;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-align: left;
+    max-width: 22ch;
+    margin: var(--space-lg) 0 0 -0.04em;
   }
 
   .masthead__wink p {
