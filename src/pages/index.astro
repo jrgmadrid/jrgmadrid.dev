@@ -43,6 +43,17 @@ import Layout from '../layouts/Layout.astro';
     <aside class="sidebar" aria-label="currently">
       <h2 class="sidebar__title">currently.</h2>
 
+      <figure class="sidebar__figure">
+        <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="yuasa-frame-title">
+          <title id="yuasa-frame-title">abstract three-band rendering of yuasa's riverside frame in night-sky purple, with one warm light point at the horizon</title>
+          <rect x="0" y="0" width="400" height="135" fill="oklch(18% 0.06 285)" />
+          <rect x="0" y="135" width="400" height="25" fill="oklch(38% 0.095 285)" />
+          <rect x="0" y="160" width="400" height="65" fill="oklch(22% 0.075 285)" />
+          <circle cx="280" cy="148" r="3" fill="oklch(72% 0.17 25)" />
+        </svg>
+        <figcaption class="sidebar__figure-caption">yuasa, the riverside frame. source of the page's purple. abstracted, because the film deserves a license fee.</figcaption>
+      </figure>
+
       <section class="sidebar__group">
         <h3 class="sidebar__label">reading</h3>
         <ul class="sidebar__list">
@@ -249,6 +260,26 @@ import Layout from '../layouts/Layout.astro';
     line-height: var(--leading-heading);
     margin: 0 0 var(--space-2xl) -0.03em;
     color: var(--color-ink-on-cream);
+  }
+
+  .sidebar__figure {
+    margin: 0 0 var(--space-2xl);
+    padding: 0;
+  }
+
+  .sidebar__figure svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar__figure-caption {
+    font-family: var(--font-mono);
+    font-size: var(--text-caption);
+    color: var(--color-ink-on-cream-muted);
+    line-height: var(--leading-body);
+    margin: var(--space-sm) 0 0;
+    max-width: 32ch;
   }
 
   .sidebar__group {
