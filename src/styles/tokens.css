@@ -58,7 +58,7 @@
   --font-headline: "Domaine Display Narrow", "DomaineDispNar", "Canela", Georgia, serif;
   --font-display: "Canela", "canelaweb", "Canela Web", Georgia, serif;
   --font-deck: "SangBleu Kingdom", "SangBleuKingdom", "Canela", Georgia, serif;
-  --font-mono: "Akkurat Mono LL Web", "Akkurat Mono", "AkkuratMonoLLWeb", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: "TX-02", "Berkeley Mono", "TX02", "Akkurat Mono LL Web", ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Container & grid */
   --container-padding: clamp(24px, 4vw, 64px);
