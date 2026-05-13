@@ -98,7 +98,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="colophon__group">
         <p class="colophon__label">built</p>
-        <p>astro + tailwind v4. claude wrote first drafts. the page refuses to look like that.</p>
+        <p>astro + tailwind v4. with &lt;3 to the <a href="https://github.com/pbakaus/impeccable">impeccable team</a>.</p>
       </div>
       <div class="colophon__group colophon__group--find">
         <p class="colophon__label">find me</p>
@@ -144,16 +144,15 @@ import Layout from '../layouts/Layout.astro';
 
   .masthead__wink {
     align-self: stretch;
-    font-family: var(--font-display);
-    font-style: italic;
+    font-family: var(--font-hand);
     font-weight: 400;
     font-size: clamp(2rem, 4.5vw, 4.5rem);
     color: var(--color-ink-on-purple-muted);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: 0;
     text-align: left;
     max-width: 22ch;
-    margin: var(--space-lg) 0 0 -0.04em;
+    margin: var(--space-lg) 0 0;
   }
 
   .masthead__wink-accent {
