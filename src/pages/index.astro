@@ -6,421 +6,135 @@ import Layout from '../layouts/Layout.astro';
   title="jrgmadrid"
   description="personal site. senior dev between things. building yomiko."
 >
-  <main class="spread">
+  <main class="hero">
+    <div class="hero__top">
+      <h1 class="hero__title">jrgmadrid.</h1>
+      <p class="hero__deck">building in public is <span class="hero__accent">cringe</span> but then again so am i.</p>
+    </div>
 
-    <header class="masthead">
-      <h1 class="masthead__title">jrgmadrid.</h1>
-      <aside class="masthead__wink">
-        <p>building in public is <span class="masthead__wink-accent">cringe</span> but then again so am i.</p>
-      </aside>
-    </header>
+    <div class="hero__bottom">
+      <p class="hero__footer">
+        <a href="https://github.com/jrgmadrid">github.com/jrgmadrid</a> · <a href="/feed.xml">/feed.xml</a> · senior dev between things, vancouver. building <a href="https://github.com/jrgmadrid/yomiko">yomiko</a>.
+      </p>
 
-    <article class="featured">
-      <div class="featured__main">
-        <p class="featured__kicker">feature</p>
-        <h2 class="featured__title">yomiko.</h2>
-        <div class="featured__body">
-          <p>japanese vn reader for macos. captures any window, ocrs via apple vision, hover popups attach to the vn's own rendered text. no parsed-text duplicate bar above the window like every other tool does. (i used those tools for two years before getting tired enough to build this one.)</p>
-          <p>on-hover vlm translation routed through a cloudflare worker proxy so installs don't ship my openrouter key. jmdict popup on shift+hover. ⌘⇧T force-translates the whole frame when ocr nopes out on calligraphic title cards or buddhist mantras.</p>
-          <p>windows port in progress (ocr sidecar in C# done; window-info sidecar tbd). sentence mining to anki coming eventually, maybe.</p>
-        </div>
-        <p class="featured__link">
-          <a href="https://github.com/jrgmadrid/yomiko">github.com/jrgmadrid/yomiko</a>
-        </p>
-      </div>
-      <aside class="featured__meta" aria-label="feature meta">
-        <div class="featured__meta-row">
-          <p class="featured__meta-label">stack</p>
-          <p>electron + react. apple vision via swift sidecar. qwen2.5-vl on openrouter.</p>
-        </div>
-        <div class="featured__meta-row">
-          <p class="featured__meta-label">repo</p>
-          <p>open source.</p>
-        </div>
-      </aside>
-    </article>
-
-    <aside class="sidebar" aria-label="currently">
-      <h2 class="sidebar__title">currently.</h2>
-
-      <figure class="sidebar__figure">
+      <figure class="hero__signature">
         <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="yuasa-frame-title">
-          <title id="yuasa-frame-title">abstract three-band rendering of yuasa's riverside frame in night-sky purple, with one warm light point at the horizon</title>
+          <title id="yuasa-frame-title">abstract three-band rendering of yuasa's riverside frame: deep purple sky, twilight horizon band, deeper purple river, and one warm light point at the horizon.</title>
           <rect x="0" y="0" width="400" height="135" fill="oklch(18% 0.06 285)" />
           <rect x="0" y="135" width="400" height="25" fill="oklch(38% 0.095 285)" />
           <rect x="0" y="160" width="400" height="65" fill="oklch(22% 0.075 285)" />
           <circle cx="280" cy="148" r="3" fill="oklch(72% 0.17 25)" />
         </svg>
-        <figcaption class="sidebar__figure-caption">yuasa, the riverside frame. source of the page's purple. abstracted, because the film deserves a license fee.</figcaption>
+        <figcaption class="hero__signature-caption">yuasa, riverside.</figcaption>
       </figure>
-
-      <section class="sidebar__group">
-        <h3 class="sidebar__label">reading</h3>
-        <ul class="sidebar__list">
-          <li>walter benjamin, <em>radio benjamin</em>. 1929-1933.</li>
-          <li>seth dickinson, <em>the traitor baru cormorant</em>. masquerade book one.</li>
-          <li>william blake, <em>songs of innocence and experience</em>. 1789-1794.</li>
-        </ul>
-      </section>
-
-      <section class="sidebar__group">
-        <h3 class="sidebar__label">building</h3>
-        <ul class="sidebar__list">
-          <li>yomiko. japanese vn reader for macos. windows port next.</li>
-          <li>this site. you're inside it.</li>
-        </ul>
-      </section>
-
-      <section class="sidebar__group">
-        <h3 class="sidebar__label">watching</h3>
-        <ul class="sidebar__list">
-          <li>yuasa, <em>night is short, walk on girl</em>. third pass this year.</li>
-          <li>whatever is on mubi at 11pm.</li>
-        </ul>
-      </section>
-
-      <section class="sidebar__group">
-        <h3 class="sidebar__label">drinking</h3>
-        <ul class="sidebar__list">
-          <li>espresso tonic. oat milk on the side.</li>
-        </ul>
-      </section>
-    </aside>
-
-    <footer class="colophon">
-      <div class="colophon__group">
-        <p class="colophon__label">type</p>
-        <p>canela, commercial type.<br />triplicate, house industries.</p>
-      </div>
-      <div class="colophon__group">
-        <p class="colophon__label">color</p>
-        <p>night-sky purple, lifted from the riverside scene in yuasa's <em>night is short, walk on girl</em>.</p>
-      </div>
-      <div class="colophon__group">
-        <p class="colophon__label">built</p>
-        <p>astro + tailwind v4. with &lt;3 to the <a href="https://github.com/pbakaus/impeccable">impeccable team</a>.</p>
-      </div>
-      <div class="colophon__group colophon__group--find">
-        <p class="colophon__label">find me</p>
-        <p><a href="https://github.com/jrgmadrid">github.com/jrgmadrid</a></p>
-        <p><a href="/feed.xml">/feed.xml</a> · rss (eventually)</p>
-      </div>
-    </footer>
-
+    </div>
   </main>
 </Layout>
 
 <style>
-  .spread {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-      "m m m m m m m m m s s s"
-      "f f f f f f f f f s s s"
-      "c c c c c c c c c c c c";
+  .hero {
     min-height: 100vh;
-  }
-
-  /* Masthead --------------------------------------------- */
-  .masthead {
-    grid-area: m;
-    background: var(--color-purple-deep);
-    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
-    border-bottom: 1px solid var(--color-grid-on-purple);
-    border-right: 1px solid var(--color-grid-on-purple);
+    padding: clamp(var(--space-2xl), 6vw, var(--space-4xl)) var(--container-padding);
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg);
+    background: var(--color-purple-deep);
+    color: var(--color-ink-on-purple);
+    box-sizing: border-box;
   }
 
-  .masthead__title {
+  .hero__title {
     font-family: var(--font-headline);
     font-style: italic;
-    font-size: var(--text-display);
     font-weight: 800;
-    line-height: var(--leading-display);
-    letter-spacing: -0.045em;
-    margin: 0 0 var(--space-md) -0.05em;
+    font-size: clamp(5rem, 14vw, 14rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin: 0 0 var(--space-lg) -0.06em;
     color: var(--color-ink-on-purple);
   }
 
-  .masthead__wink {
-    align-self: stretch;
+  .hero__deck {
     font-family: var(--font-deck);
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(2rem, 4.5vw, 4.5rem);
-    color: var(--color-ink-on-purple);
-    line-height: 1.05;
+    font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+    line-height: 1.1;
     letter-spacing: -0.015em;
-    text-align: left;
-    max-width: 22ch;
-    margin: var(--space-lg) 0 0 -0.03em;
+    color: var(--color-ink-on-purple-muted);
+    max-width: 24ch;
+    margin: 0;
   }
 
-  .masthead__wink-accent {
+  .hero__accent {
     color: var(--color-warm-ribbon);
   }
 
-  .masthead__wink p {
-    margin: 0;
+  .hero__bottom {
+    margin-top: auto;
+    padding-top: var(--space-4xl);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-2xl);
   }
 
-  /* Featured pointer ------------------------------------ */
-  .featured {
-    grid-area: f;
-    background: var(--color-purple-twilight);
-    padding: var(--space-3xl) var(--container-padding);
-    border-right: 1px solid var(--color-grid-on-purple);
-    color: var(--color-ink-on-purple);
-    display: grid;
-    grid-template-columns: 5fr 3fr;
-    column-gap: var(--space-2xl);
-    align-items: start;
-  }
-
-  .featured__meta {
+  .hero__footer {
+    flex: 1;
     font-family: var(--font-mono);
     font-size: var(--text-small);
     line-height: var(--leading-body);
     color: var(--color-ink-on-purple-muted);
-    padding-left: var(--space-lg);
-    border-left: 1px solid var(--color-grid-on-purple);
-  }
-
-  .featured__meta-row {
-    margin-bottom: var(--space-lg);
-  }
-
-  .featured__meta-row:last-child {
-    margin-bottom: 0;
-  }
-
-  .featured__meta-label {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: var(--text-small);
-    color: var(--color-ink-on-purple-faint);
-    margin: 0 0 var(--space-xs);
-  }
-
-  .featured__meta-row p {
     margin: 0;
+    max-width: 64ch;
   }
 
-  .featured__kicker {
-    font-family: var(--font-mono);
-    font-size: var(--text-caption);
-    letter-spacing: 0.22em;
-    color: var(--color-ink-on-purple-muted);
-    margin: 0 0 var(--space-lg);
-  }
-
-  .featured__title {
-    font-style: italic;
-    font-size: var(--text-heading);
-    font-weight: 400;
-    line-height: var(--leading-heading);
-    margin: 0 0 var(--space-2xl) -0.03em;
-    max-width: 20ch;
-    color: var(--color-ink-on-purple);
-  }
-
-  .featured__body {
-    max-width: 52ch;
-    margin-bottom: var(--space-xl);
-  }
-
-  .featured__body p {
-    font-family: var(--font-mono);
-    font-size: var(--text-body);
-    line-height: var(--leading-body);
-    margin: 0 0 var(--space-md);
-    color: var(--color-ink-on-purple);
-  }
-
-
-  .featured__link {
-    font-family: var(--font-mono);
-    font-size: var(--text-small);
+  .hero__signature {
+    width: clamp(80px, 10vw, 140px);
+    flex-shrink: 0;
     margin: 0;
-    color: var(--color-ink-on-purple-muted);
-  }
-
-  /* Sidebar -------------------------------------------- */
-  .sidebar {
-    grid-area: s;
-    background: var(--color-cream-paper);
-    color: var(--color-ink-on-cream);
-    padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
-  }
-
-  .sidebar__title {
-    font-style: italic;
-    font-size: var(--text-heading);
-    font-weight: 400;
-    line-height: var(--leading-heading);
-    margin: 0 0 var(--space-2xl) -0.03em;
-    color: var(--color-ink-on-cream);
-  }
-
-  .sidebar__figure {
-    margin: 0 0 var(--space-2xl);
     padding: 0;
-  }
-
-  .sidebar__figure svg {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .sidebar__figure-caption {
-    font-family: var(--font-mono);
-    font-size: var(--text-caption);
-    color: var(--color-ink-on-cream-muted);
-    line-height: var(--leading-body);
-    margin: var(--space-sm) 0 0;
-    max-width: 32ch;
-  }
-
-  .sidebar__group {
-    margin-bottom: var(--space-xl);
-  }
-
-  .sidebar__group:last-child {
-    margin-bottom: 0;
-  }
-
-  .sidebar__label {
-    font-style: italic;
-    font-size: var(--text-subheading);
-    font-weight: 400;
-    line-height: 1.1;
-    margin: 0 0 var(--space-sm);
-    color: var(--color-ink-on-cream-muted);
-  }
-
-  .sidebar__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .sidebar__list li {
-    font-family: var(--font-mono);
-    font-size: var(--text-small);
-    line-height: var(--leading-body);
-    padding: var(--space-sm) 0;
-    border-top: 1px solid var(--color-grid-on-cream);
-    color: var(--color-ink-on-cream);
-  }
-
-  .sidebar__list li:first-child {
-    border-top: none;
-    padding-top: 0;
-  }
-
-  /* Colophon ------------------------------------------- */
-  .colophon {
-    grid-area: c;
-    background: var(--color-purple-deeper);
-    padding: var(--space-xl) var(--container-padding);
-    border-top: 1px solid var(--color-grid-on-purple);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: var(--grid-gap);
-    color: var(--color-ink-on-purple-muted);
-  }
-
-  .colophon__group {
-    font-family: var(--font-mono);
-    font-size: var(--text-small);
-    line-height: var(--leading-body);
-  }
-
-  .colophon__group p {
-    margin: 0;
-  }
-
-  .colophon__group--find {
     text-align: right;
   }
 
-  .colophon__group--find a {
-    color: var(--color-ink-on-purple);
+  .hero__signature svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-grid-on-purple);
   }
 
-  .colophon__label {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: var(--text-small);
+  .hero__signature-caption {
+    font-family: var(--font-mono);
+    font-size: var(--text-caption);
     color: var(--color-ink-on-purple-faint);
-    margin: 0 0 var(--space-xs);
+    letter-spacing: 0.02em;
+    margin: var(--space-xs) 0 0;
+    line-height: 1.4;
   }
 
-  /* Mobile-different ----------------------------------- */
   @media (max-width: 767px) {
-    .spread {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "m"
-        "f"
-        "s"
-        "c";
-    }
-
-    .masthead {
-      display: block;
+    .hero {
       padding: var(--space-2xl) var(--container-padding);
     }
 
-    .masthead__publication,
-    .masthead__wink {
-      grid-column: auto;
+    .hero__title {
+      font-size: clamp(3.5rem, 16vw, 6rem);
     }
 
-    .masthead__wink {
-      text-align: left;
+    .hero__deck {
+      font-size: clamp(1.25rem, 5vw, 1.75rem);
       max-width: none;
-      margin: var(--space-lg) 0 0;
-      font-size: var(--text-body);
     }
 
-    .featured {
-      padding: var(--space-2xl) var(--container-padding);
-      border-right: none;
-      border-top: 1px solid var(--color-grid-on-purple);
-      grid-template-columns: 1fr;
-      column-gap: 0;
+    .hero__bottom {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: var(--space-lg);
     }
 
-    .featured__title {
-      max-width: 18ch;
-    }
-
-    .featured__meta {
-      border-left: none;
-      border-top: 1px solid var(--color-grid-on-purple);
-      padding-left: 0;
-      padding-top: var(--space-lg);
-      margin-top: var(--space-xl);
-    }
-
-    .sidebar {
-      padding: var(--space-2xl) var(--container-padding);
-    }
-
-    .colophon {
-      grid-template-columns: 1fr;
-      row-gap: var(--space-lg);
-    }
-
-    .colophon__group {
-      grid-column: 1 / -1;
-    }
-
-    .colophon__group--find {
+    .hero__signature {
+      width: clamp(100px, 30vw, 160px);
+      align-self: flex-start;
       text-align: left;
     }
   }
