@@ -134,10 +134,12 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .masthead__title {
+    font-family: var(--font-headline);
+    font-style: italic;
     font-size: var(--text-display);
-    font-weight: 700;
+    font-weight: 800;
     line-height: var(--leading-display);
-    letter-spacing: -0.035em;
+    letter-spacing: -0.045em;
     margin: 0 0 var(--space-md) -0.05em;
     color: var(--color-ink-on-purple);
   }
@@ -146,14 +148,14 @@ import Layout from '../layouts/Layout.astro';
     align-self: stretch;
     font-family: var(--font-deck);
     font-style: italic;
-    font-weight: 900;
+    font-weight: 400;
     font-size: clamp(2rem, 4.5vw, 4.5rem);
     color: var(--color-ink-on-purple);
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
     text-align: left;
     max-width: 22ch;
-    margin: var(--space-lg) 0 0 -0.05em;
+    margin: var(--space-lg) 0 0 -0.03em;
   }
 
   .masthead__wink-accent {
